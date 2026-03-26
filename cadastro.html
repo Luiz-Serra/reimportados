@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Re Importados</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+        <a href="login.html" class="back-link">← Voltar para o login</a>
+
+        <div class="auth-card">
+            <header class="auth-header">
+                <h1 class="logo">Re <span>Importados</span></h1>
+                <p>Crie sua conta para aproveitar ofertas exclusivas</p>
+            </header>
+
+            <form id="register-form" class="auth-form">
+                <div class="input-group">
+                    <label for="fullname">Nome Completo</label>
+                    <input type="text" id="fullname" placeholder="Ex: Luiz" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email-reg">E-mail</label>
+                    <input type="email" id="email-reg" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="pass-reg">Senha</label>
+                    <input type="password" id="pass-reg" placeholder="Crie uma senha forte" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="pass-confirm">Confirmar Senha</label>
+                    <input type="password" id="pass-confirm" placeholder="Repita a senha" required>
+                </div>
+
+                <button type="submit" class="auth-btn">Criar Minha Conta</button>
+            </form>
+
+            <footer class="auth-footer">
+                <p>Já possui uma conta? <a href="login.html">Faça login</a></p>
+            </footer>
+        </div>
+    </div>
+<script src="cadastro.js"></script>
+</body>
+</html>

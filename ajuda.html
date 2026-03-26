@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="ajuda.js" defer></script>
+    <title>Ajuda - Re Importados</title>
+    <link rel="stylesheet" href="ajuda.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="help-page">
+
+  <header class="help-header">
+    <a href="inicio.html" class="back-arrow" title="Voltar para a página inicial">←</a>
+    <h1 class="logo">Re <span>Importados</span></h1>
+</header>
+
+
+
+    <main class="help-content">
+        <section class="intro-help">
+            <div class="help-title-group">
+                <i>🎧</i>
+                <h2>Precisa de ajuda?</h2>
+            </div>
+            <p>Se está em dúvida sobre algum produto/entrega, este guia irá te mostrar que a confiança vem de casa ;D</p>
+        </section>
+
+        <div class="help-grid">
+           <aside class="help-sidebar">
+    <h3>Compras</h3>
+    <ul>
+        <li><button onclick="showContent('produtos')" class="tab-btn active">Produtos</button></li>
+        <li><button onclick="showContent('pagamentos')" class="tab-btn">Pagamentos</button></li>
+    </ul>
+</aside>
+
+<section class="feedback-section">
+    <p>Qualquer outra dúvida/feedback, fique à vontade para compartilhar com a gente!</p>
+    <div class="input-group">
+        <textarea id="feedbackText" placeholder="Digite sua mensagem..."></textarea>
+        <button onclick="sendFeedback()" class="send-btn">Enviar Mensagem</button>
+    </div>
+</section>
+
+            <article class="help-card">
+                <div class="card-column">
+                    <h3>🛒 Compras</h3>
+                    <h4>Como comprar?</h4>
+                    <ol>
+                        <li>Escolha o produto desejado.</li>
+                        <li>Clique em Adicionar ao Carrinho.</li>
+                        <li>Finalize o pagamento com segurança.</li>
+                        <li>Você receberá um e-mail confirmando seu pedido.</li>
+                    </ol>
+                </div>
+
+                <div class="card-column separator">
+                    <h4>Dúvidas comuns</h4>
+                    <ul class="faq-list">
+                        <li>
+                            <strong>Meu pedido não atualiza!</strong>
+                            <p>Não se preocupe: atualizações podem levar algumas horas após a postagem.</p>
+                        </li>
+                        <li>
+                            <strong>Produtos importados demoram mais?</strong>
+                            <p>Alguns itens podem ter prazo adicional — isso sempre será indicado na página do produto automaticamente.</p>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+
+        <section class="feedback-section">
+            <p>Qualquer outra dúvida/feedback, fique à vontade para compartilhar com a gente!</p>
+            <textarea placeholder="Digite sua mensagem..."></textarea>
+        </section>
+    </main>
+
+    <a href="https://wa.me/seunumeroaqui" class="whatsapp-float" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </a>
+
+
+    <script src="ajuda.js" defer></script>
+</body>
+</html>

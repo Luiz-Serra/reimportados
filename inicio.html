@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <script src="inicio.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Re Importados - Beleza que acompanha o Futuro</title>
+    <link rel="stylesheet" href="inicio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <header>
+           <div class="top-bar">
+    <div class="accessibility-container">
+        <button id="acc-toggle" class="acc-btn">
+            <i>♿</i> Acessibilidade <span class="arrow">V</span>
+        </button>
+        
+        <div id="acc-menu" class="acc-menu hidden">
+            <div class="acc-pointer"></div>
+            <button onclick="changeFontSize(2)"><i>↗</i> Aumentar texto</button>
+            <button onclick="toggleDarkMode()"><i>✒</i> Tema Escuro</button>
+            <button onclick="toggleContrast()"><i>☼</i> Alto Contraste</button>
+            <button onclick="changeFontSize(-2)"><i>↘</i> Diminuir Texto</button>
+            <button onclick="resetAccessibility()"><i>↺</i> Reset</button>
+        </div>
+    </div>
+   <a href="ajuda.html" class="help-link">
+            <i>🎧</i> Precisa de ajuda?
+        </a>
+    </div>
+</div>
+           
+        </div>
+       <nav class="main-nav">
+    <h1 class="logo">Re <span>Importados</span></h1>
+
+    <div class="search-container">
+        <input type="text" placeholder="Busca">
+        <button class="search-btn">🔍</button>
+    </div>
+
+    <div class="user-actions">
+        <a href="login.html" class="icon-link">👤</a>
+      <a href="#" id="open-cart" class="icon-link">
+        🛒
+        <span id="cart-count">0</span>
+    </a>
+</div>
+
+<div id="cart-overlay" class="overlay"></div>
+    </div>
+</nav>
+       <ul class="menu-links">
+    <li><a href="#">Promos</a></li>
+    <li><a href="#">Cabelos</a></li>
+    <li><a href="#">Perfumes</a></li>
+    <li><a href="#">Makes</a></li>
+    <li><a href="#">Cuidados Pessoais</a></li>
+  <li class="nav-item dropdown">
+    <a href="#" id="marcas-link" class="nav-link">Marcas <i class="fas fa-chevron-down"></i></a>
+    <ul id="marcas-menu" class="dropdown-menu hidden">
+        <li><a href="#" onclick="filterByBrand('Pokoloka')">Pokoloka</a></li>
+        <li><a href="#" onclick="filterByBrand('Victoria\'s Secret')">Victoria's Secret</a></li>
+        <li><a href="#" onclick="filterByBrand('Payot')">Payot</a></li>
+        <li><a href="#" onclick="filterByBrand('Océane')">Océane</a></li>
+        <li class="divider"></li>
+        <li><a href="#" onclick="filterByBrand('Todas')">Ver Todas</a></li>
+    </ul>
+</li>
+</ul>
+    </header>
+
+   <section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-image-wrapper">
+            <img src="renatinha.png" alt="Mulher com perfume">
+        </div>
+
+        <div class="hero-text-wrapper">
+            <h2>BELEZA</h2>
+            <h3>que acompanha</h3>
+            <h2>O <span>FUTURO</span>.</h2>
+        </div>
+    </div>
+</section>
+
+    <section class="products-section">
+        <h2>Produtos em <span>ALTA</span></h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="bodysplashpokoloka.png" alt="Kit Pokoloka">
+                <p class="product-name">Kit Hidratante/Body Splash Pokoloka</p>
+                <p class="price">R$ 169,99</p>
+                <button class="add-to-cart-btn">
+                <img src="carrinho.png" alt="Carrinho" class="cart-btn-icon">
+                Adicionar ao Carrinho
+            </button>
+            </div>
+            <div class="product-card">
+                <img src="vicsecret.png" alt="Coconut Passion">
+                <p class="product-name">Coconut Passion Victoria's Secret</p>
+                <p class="price">R$ 329,99</p>
+                <button class="add-to-cart-btn">
+                <img src="carrinho.png" alt="Carrinho" class="cart-btn-icon">
+                Adicionar ao Carrinho
+            </button>
+            </div>
+            <div class="product-card">
+                <img src="payot.webp" alt="Payot Vitamina C">
+                <p class="product-name">Sérum Payot Complexo Vitamina C</p>
+                <p class="price">R$ 109,99</p>
+                <button class="add-to-cart-btn">
+                <img src="carrinho.png" alt="Carrinho" class="cart-btn-icon">
+                Adicionar ao Carrinho
+            </button>
+            </div>
+             <div class="product-card">
+                <img src="oceane.webp" alt="Kit Base Líquida Oceane">
+                <p class="product-name">Corretivo + Líquido Fair Océane Edition</p>
+                <p class="price">R$ 119,90</p>
+                <button class="add-to-cart-btn">
+                <img src="carrinho.png" alt="Carrinho" class="cart-btn-icon">
+                Adicionar ao Carrinho
+            </button>
+            </div>
+            </div>
+    </section>
+
+
+<div id="cart-toast" class="toast-hidden">Adicionado ao carrinho!</div>
+    
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3 class="footer-logo">Re <span>Importados</span></h3>
+            <p>Sua loja de confiança para produtos importados originais. Qualidade e exclusividade ao seu alcance.</p>
+        </div>
+
+        <div class="footer-column">
+            <h4>Localização</h4>
+            <address>
+                Av. Américo Pereira Lima, 80<br>
+                Sala 05 - Jardim Lavínia<br>
+                Mococa - SP<br>
+                CEP: 13736-260
+            </address>
+        </div>
+
+        <div class="footer-column">
+            <h4>Fale Conosco</h4>
+            <p>
+                <i class="fas fa-envelope"></i> <a href="mailto:re.importados87@gmail.com">re.importados87@gmail.com</a><br>
+                <i class="fab fa-whatsapp"></i> <a href="https://wa.me/5519996332307" target="_blank">(19) 99633-2307</a>
+            </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Re Importados LTDA - Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<div id="cart-overlay" class="overlay"></div>
+
+<aside id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h3>Meu Carrinho</h3>
+        <span id="close-cart" class="close-cart">&times;</span>
+    </div>
+    
+    <div id="cart-items" class="cart-body">
+        <p class="empty-msg">Seu carrinho está vazio.</p>
+    </div>
+
+    <div class="cart-footer">
+        <div class="total-container">
+            <span>Total:</span>
+            <span id="cart-total">R$ 0,00</span>
+        </div>
+        <button class="checkout-btn">Finalizar Compra</button>
+    </div>
+</aside>
+
+<aside id="product-details-sidebar" class="details-sidebar">
+    <div class="details-header">
+        <h3 id="details-product-name">Nome do Produto</h3>
+        <span id="close-details" class="close-details">&times;</span>
+    </div>
+    
+    <div class="details-body">
+        <div class="details-image-wrapper">
+            <img id="details-product-image" src="" alt="Produto">
+        </div>
+        <p class="details-price" id="details-product-price">R$ 0,00</p>
+        
+        <div class="details-specs">
+            <h4>Especificações:</h4>
+            <p id="details-product-description">Descrição detalhada do produto aparecerá aqui...</p>
+        </div>
+    </div>
+
+    <div class="details-footer">
+        <button id="details-add-to-cart" class="add-to-cart-btn">
+            🛒 Adicionar ao Carrinho
+        </button>
+    </div>
+</aside>
+
+
+
+
+
+    <script src="inicio.js"></script>
+
+</body>
+</html>

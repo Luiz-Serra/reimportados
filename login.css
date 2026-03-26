@@ -1,0 +1,126 @@
+/* Estilos Específicos para Páginas de Autenticação */
+.auth-page {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #888;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #C5A059;
+}
+
+/* O Card de Login */
+.auth-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.auth-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.auth-header p {
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+/* Formulário */
+.auth-form {
+    text-align: left;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fdfdfd;
+    transition: 0.3s;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #C5A059;
+    background: #fff;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    color: #C5A059;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+/* Botão de Ação */
+.auth-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-btn:hover {
+    background-color: #C5A059; /* Muda para dourado no hover */
+    transform: translateY(-2px);
+}
+
+.auth-footer {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #C5A059;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Suporte ao Modo Escuro */
+body.dark-mode.auth-page { background-color: #121212; }
+body.dark-mode .auth-card { background-color: #1e1e1e; color: #fff; }
+body.dark-mode .input-group label { color: #ccc; }
+body.dark-mode .input-group input { background-color: #2a2a2a; border-color: #333; color: #fff; }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Re Importados</title>
+
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+        <a href="inicio.html" class="back-link">← Voltar para a loja</a>
+
+        <div class="auth-card">
+            <header class="auth-header">
+                <h1 class="logo">Re <span>Importados</span></h1>
+                <p>Acesse sua conta para continuar</p>
+            </header>
+
+            <form id="login-form" class="auth-form">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+
+                <a href="#" class="forgot-password">Esqueceu sua senha?</a>
+
+                <button type="submit" class="auth-btn">Entrar</button>
+            </form>
+
+            <footer class="auth-footer">
+                <p>Ainda não possui conta? <a href="cadastro.html">Cadastre-se</a></p>
+            </footer>
+        </div>
+    </div>
+<script src="login.js"></script>
+</body>
+</html>

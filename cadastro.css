@@ -1,0 +1,127 @@
+/* --- Estilos da Página de Cadastro --- */
+
+.auth-page {
+    background-color: #f4f4f4; /* Fundo levemente cinza para destacar o card branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 480px; /* Um pouco mais largo que o login para acomodar melhor os campos */
+    padding: 20px;
+}
+
+/* Card de Cadastro */
+.auth-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08); /* Sombra suave e elegante */
+    text-align: center;
+}
+
+/* Estilo do Formulário */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Espaçamento entre os campos */
+    text-align: left;
+    margin-top: 30px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+/* Efeito de foco no input (Dourado Re Importados) */
+.input-group input:focus {
+    border-color: #C5A059;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.1);
+}
+
+/* Botão de Cadastro */
+.auth-btn {
+    background-color: #222;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.auth-btn:hover {
+    background-color: #C5A059; /* Cor dourada no hover */
+    transform: translateY(-2px);
+}
+
+.auth-btn:active {
+    transform: translateY(0);
+}
+
+/* Footer do Card */
+.auth-footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.auth-footer a {
+    color: #C5A059;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- MODO ESCURO (DARK MODE) --- */
+body.dark-mode.auth-page {
+    background-color: #0f0f0f;
+}
+
+body.dark-mode .auth-card {
+    background-color: #1a1a1a;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .input-group label {
+    color: #bbb;
+}
+
+body.dark-mode .input-group input {
+    background-color: #252525;
+    border-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .auth-header p,
+body.dark-mode .auth-footer {
+    color: #999;
+}
