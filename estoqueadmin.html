@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque Rê</title>
+    <link rel="stylesheet" href="estoqueadmin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <span class="brand-name">Re Importados</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <div class="menu-group">
+                <p class="group-title">MENU PRINCIPAL</p>
+                <a href="#" class="nav-link"><i class="icon-home"></i> Dashboard</a>
+                <a href="#" class="nav-link"><i class="icon-box"></i> Produtos</a>
+                <a href="#" class="nav-link active"><i class="icon-store"></i> Estoque</a>
+                <a href="#" class="nav-link"><i class="icon-truck"></i> Fornecedores</a>
+                <a href="#" class="nav-link"><i class="icon-moves"></i> Movimentações</a>
+            </div>
+
+            <div class="menu-group">
+                <p class="group-title">CONFIGURAÇÕES</p>
+                <a href="#" class="nav-link"><i class="icon-gear"></i> Sistema</a>
+                <a href="#" class="nav-link"><i class="icon-users"></i> Usuários</a>
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <img src="renatinha.png" alt="Renata" class="user-avatar">
+            <div class="user-info">
+                <span class="user-name">Renata Gonçalves</span>
+                <span class="user-role">Admin</span>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="stats-grid">
+            <div class="dashboard-details-grid">
+    <aside class="activities-panel">
+        <h3 class="panel-title">Atividades recentes</h3>
+        <div class="activity-item">
+            <div class="activity-icon icon-user-blue">👤</div>
+            <div class="activity-info">
+                <p class="activity-title">Novo fornecedor</p>
+                <p class="activity-meta">John Doe - 2 horas atrás</p>
+            </div>
+        </div>
+        <div class="activity-item">
+            <div class="activity-icon icon-cart-green">🛒</div>
+            <div class="activity-info">
+                <p class="activity-title">Compra realizada</p>
+                <p class="activity-meta">Order #456 - 4 horas atrás</p>
+            </div>
+        </div>
+        <div class="activity-item">
+            <div class="activity-icon icon-msg-purple">💬</div>
+            <div class="activity-info">
+                <p class="activity-title">Nova mensagem</p>
+                <p class="activity-meta">Product X - 6 horas atrás</p>
+            </div>
+        </div>
+    </aside>
+
+    <div class="charts-grid">
+  <div class="chart-card line-chart-card">
+    <div class="chart-header">
+      <h3 class="chart-title">Controle de Estoque</h3>
+      <div class="chart-legend">
+        <span class="legend-item blue"><span class="dot"></span> Quant. Atual de Estoque</span>
+        <span class="legend-item green"><span class="dot"></span> Estoque Ideal</span>
+      </div>
+    </div>
+    <div class="canvas-container">
+      <canvas id="lineChartStock"></canvas>
+    </div>
+  </div>
+
+  <div class="chart-card pie-chart-card">
+    <div class="chart-header">
+      <h3 class="chart-title">Categorias</h3>
+    </div>
+    <div class="canvas-container canvas-pie-container">
+      <canvas id="pieChartCategories"></canvas>
+    </div>
+  </div>
+</div>
+
+    <section class="status-panel">
+        <div class="panel-header">
+            <h3 class="panel-title">Status do Estoque</h3>
+            <a href="#" class="view-all">Ver todos</a>
+        </div>
+        <table class="status-table">
+            <thead>
+                <tr>
+                    <th>PRODUTO</th>
+                    <th>CÓDIGO</th>
+                    <th>CATEGORIA</th>
+                    <th>ESTOQUE TOTAL</th>
+                    <th>STATUS</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="prod-cell">
+                        <div class="prod-img">💄</div>
+                        <div>
+                            <strong>Dalla - Base Líquida My Secret</strong><br>
+                            <small>#SKU - 1234</small>
+                        </div>
+                    </td>
+                    <td>PRD-001</td>
+                    <td>Maquiagem</td>
+                    <td>
+                        <div class="stock-progress-container">
+                            <span>48 unidades</span>
+                            <div class="progress-bar"><div class="progress fill-success" style="width: 80%;"></div></div>
+                        </div>
+                    </td>
+                    <td><span class="badge success">Estável</span></td>
+                </tr>
+                <tr>
+                    <td class="prod-cell">
+                        <div class="prod-img">🧴</div>
+                        <div>
+                            <strong>Payot - Kit Tratamento Facial</strong><br>
+                            <small>#SKU - 5678</small>
+                        </div>
+                    </td>
+                    <td>PRD-002</td>
+                    <td>Cuidados Pessoais</td>
+                    <td>
+                        <div class="stock-progress-container">
+                            <span>5 unidades</span>
+                            <div class="progress-bar"><div class="progress fill-danger" style="width: 15%;"></div></div>
+                        </div>
+                    </td>
+                    <td><span class="badge danger">Crítico</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
+            <div class="stat-card">
+                <div class="stat-content">
+                    <p class="stat-label">Total de Produtos</p>
+                    <h2 class="stat-value">892</h2>
+                    <p class="stat-trend trend-up">↑ 12.5% <span class="trend-text">vs último mês</span></p>
+                </div>
+                <div class="stat-icon icon-blue">📦</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-content">
+                    <p class="stat-label">Estoque Baixo</p>
+                    <h2 class="stat-value">47</h2>
+                    <p class="stat-trend trend-down">↑ 5% <span class="trend-text">vs último mês</span></p>
+                </div>
+                <div class="stat-icon icon-red">⚠️</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-content">
+                    <p class="stat-label">Valor Total</p>
+                    <h2 class="stat-value">R$ 1.284,75</h2>
+                    <p class="stat-trend trend-up">↑ 8.5% <span class="trend-text">vs último mês</span></p>
+                </div>
+                <div class="stat-icon icon-green">S</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-content">
+                    <p class="stat-label">Fornecedores</p>
+                    <h2 class="stat-value">24</h2>
+                    <p class="stat-trend trend-up">↑ 3 novos <span class="trend-text">este mês</span></p>
+                </div>
+                <div class="stat-icon icon-purple">👥</div>
+            </div>
+        </div>
+
+        <section class="inventory-container">
+            <div class="inventory-filters">
+                <div class="filter-card active" data-filter="all">
+                    <span>Todos</span>
+                    <strong>124</strong>
+                </div>
+                <div class="filter-card warning" data-filter="low">
+                    <span>Estoque Baixo</span>
+                    <strong>12</strong>
+                </div>
+                <div class="filter-card danger" data-filter="out">
+                    <span>Sem Estoque</span>
+                    <strong>3</strong>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="inventory-table">
+                    <thead>
+                        <tr>
+                            <th>Produto</th>
+                            <th>SKU</th>
+                            <th>Categoria</th>
+                            <th>Qtd. Atual</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="product-info">
+                                <img src="https://via.placeholder.com/40" alt="Produto">
+                                <span>Base Líquida My Secret</span>
+                            </td>
+                            <td>PRD-001</td>
+                            <td>Maquiagem</td>
+                            <td>
+                                <div class="stock-control">
+                                    <button class="btn-qty btn-minus">-</button>
+                                    <input type="number" value="48">
+                                    <button class="btn-qty btn-plus">+</button>
+                                </div>
+                            </td>
+                            <td><span class="badge success">Estável</span></td>
+                            <td>
+                                <button class="btn-icon">✎</button>
+                                <button class="btn-icon">🕒</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="estoqueadmin.js"></script>
+</body>
+</html>
